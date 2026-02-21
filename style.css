@@ -1,100 +1,109 @@
-body {
-    margin: 0;
-    padding: 0;
-    background:  #d9d2cc;
-    font-family: "Quattrocento Sans", sans-serif;
-    box-sizing: border-box;
+@font-face {
+  font-family: 'TAN WHISTLING';
+  src: url(./TAN-WHISTLING.woff2);
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #d9d2cc;
+  font-family: "Quattrocento Sans", sans-serif;
+  box-sizing: border-box;
+}
+
 /* announcement bar */
 
 .flash-sale {
-    color: #f37abb;
-    text-decoration: underline;
+  color: #f37abb;
+  text-decoration: underline;
 }
 
 .left-text {
-    font-size: 26px;
+  font-size: 26px;
 }
 
 
 .top-bar-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-    gap: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  gap: 80px;
 }
 
 .timer {
-    display: flex;
-    gap: 12px;
-    font-size: 26px;
-    color: #a5532a;
+  display: flex;
+  gap: 12px;
+  font-size: 26px;
+  color: #a5532a;
 }
 
 .time-segment {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-weight: 700;
-    font-size: 18px;
-    color: #a5532a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: #a5532a;
 }
 
 /* announcement bar */
 
 .header-bottom a {
-    color: #232222BF;
-    text-decoration: unset;
-    font-size: 20px;
-    padding: 0 20px;
+  color: #232222BF;
+  text-decoration: unset;
+  font-size: 20px;
+  padding: 0 20px;
 }
 
 .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 50px;
-        gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 50px;
+  gap: 20px;
 }
 
 .header-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .logo img {
-    width: 120px;
-    object-fit: cover;
+  width: 120px;
+  object-fit: cover;
 }
 
 .icon i {
-    font-size: 24px;
-    color: #232222;
+  font-size: 24px;
+  color: #232222;
 }
 
 .right-icons-wrap {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 img {
-    display: flex;
-    max-width: 100%;
+  display: flex;
+  max-width: 100%;
 }
+
 .scrolling-marquee {
   overflow: hidden;
   background: #b8a293;
   padding: 4px 0 6px;
 }
+
 .marquee-content {
   display: flex;
   width: max-content;
   animation: scrolling 18s linear infinite;
 }
+
 .scroll-content1 {
   display: flex;
   align-items: center;
@@ -105,6 +114,7 @@ img {
   padding-left: 30px;
 
 }
+
 .infinite-scrolling {
   overflow: hidden;
   background: #b8a293;
@@ -136,8 +146,9 @@ img {
   0% {
     transform: translateX(0);
   }
+
   100% {
-        transform: translateX(-20%);
+    transform: translateX(-20%);
   }
 }
 
@@ -145,8 +156,9 @@ img {
   0% {
     transform: translateX(0);
   }
+
   100% {
-        transform: translateX(-20%);
+    transform: translateX(-20%);
   }
 }
 
@@ -158,13 +170,135 @@ img {
 
 
 .left_img img {
-    border-radius: 50% 50%  0 0;
+  border-radius: 50% 50% 0 0;
 }
 
 .left_img {
-    width: 44%;
-    border: 15px solid #b8a29375;
-    border-radius: 50% 50% 0 0;
-    border-width: 28px 6px 6px 28px;
-    padding: 0;
+  width: 44%;
+  border: 15px solid #b8a29375;
+  border-radius: 50% 50% 0 0;
+  border-width: 28px 6px 6px 28px;
+  padding: 0;
+}
+
+section.product-details-section {
+  display: flex;
+  gap: 30px;
+  padding: 50px 100px;
+  align-items: center;
+
+}
+
+.right_details {
+  width: 50%;
+}
+
+.head {
+  font-family: 'TAN WHISTLING';
+  font-size: 60px;
+  color: #612a2ab0;
+  font-weight: 700;
+}
+
+.price {
+  font-size: 32px;
+  font-weight: 800;
+  color: #612a2ab0;
+}
+
+.description {
+  font-size: 18px;
+  color: #612a2ab0;
+  font-weight: 600;
+  font-style: italic;
+  padding-top: 10px;
+
+}
+
+
+button, select {
+    background: unset;
+    border: unset;
+}
+
+button, select {
+    background: unset;
+    border: unset;
+}
+
+.quantity-selector {
+    font-size: 24px;
+    color: #612a2ab0;
+    font-weight: 600;
+    background: transparent;
+    width: max-content;
+    padding: 4px 12px;
+    border: 3px solid #612a2ab0;
+    border-bottom-width: 7px;
+    border-right-width: 6px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+#decrease, #increase {
+    color: #612a2ab0;
+    font-size: 25px;
+    font-weight: 100;
+}
+
+select.size-select {
+    font-size: 18px;
+    color: #612a2ab0;
+    font-weight: 6;
+    background: transparent;
+    width: max-content;
+    border: 3px solid #612a2ab0;
+    border-bottom-width: 7px;
+    border-right-width: 6px;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 8px;
+}
+
+button#decrease {
+    margin-right: 10px;
+}
+
+button#increase {
+    margin-left: 10px;
+}
+
+button.add-to-cart {
+    font-size: 41px;
+    color: #612a2ab0;
+    font-weight: 800;
+    background: transparent;
+    width: max-content;
+    padding: 10px 58px 4px;
+    border: 3px solid #612a2ab0;
+    border-bottom-width: 10px;
+    border-right-width: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-family: 'TAN WHISTLING';
+}
+
+span.bubble {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #612a2a;
+    border-radius: 50%;
+    font-size: 12px;
+    height: 16px;
+    width: 16px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+icon#cart {
+    position: relative;
 }

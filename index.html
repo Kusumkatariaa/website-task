@@ -69,7 +69,8 @@
                     <icon class="icon"><i class="ri-facebook-circle-fill"></i></icon>
                     <icon class="icon"><i class="ri-instagram-line"></i></icon>
                     <icon class="icon"><i class="ri-folder-user-line"></i></icon>
-                    <icon class="icon"><i class="ri-shopping-cart-line"></i></icon>
+                    <icon id="cart" class="icon"><i class="ri-shopping-cart-line"></i>
+                    <span class="bubble" style="display: none;">0</span></icon>
                 </div>
             </div>
             <div class="header-bottom">
@@ -140,7 +141,24 @@
             <div class="left_img">
                 <img src="./assets/PRODUCT_10.webp" alt="Product Image">
             </div>
-        </section>
+            <div class="right_details">
+                <div class="head">Elegant Necklace</div>
+                <div class="price">$79.99</div>
+                <div class="description">Embrace your inner elegance with our stunning necklace. Perfect for any occasion, this piece adds a touch of sophistication to your look.</div>
+                <select class="size-select">
+                    <option value="" disabled selected>Select Size</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                <div class="quantity-selector">
+                    <button class="quantity-btn" id="decrease">-</button>
+                    <span id="quantity" class="quantity">1</span>
+                    <button class="quantity-btn" id="increase">+</button>   
+                    </div> 
+                <button id="add-to-cart" class="add-to-cart">Add to Cart</button>
+            </div>
+            </section>
     </main>
     <script src="script.js"></script>
 </body>
