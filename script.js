@@ -1,7 +1,7 @@
 function selector(id) {
     return document.getElementById(id);
 }
-
+console
 let hoursText = selector("hours");
 let minutesText = selector("minutes");
 let secondsText = selector("seconds");
@@ -50,4 +50,33 @@ addToCartButton.addEventListener("click", () => {
     setTimeout(() => {
         cartIcon.classList.remove("shake");
     }, 500);
+});
+
+let productImage = document.querySelector('.prodImg');
+let variantImages = document.querySelectorAll('.prodVarImg');
+// console.log(productImage, variantImages)
+function onVariantClick() {
+    variantImages.forEach((variant) => {
+        variant.addEventListener('click', () => {
+            variantImages.forEach((elem) => {
+                elem.classList.remove("active")
+            })
+            variant.classList.add("active")
+            let variantImgSrc = variant.src;
+            productImage.src = variantImgSrc;
+        })
+    })
+
+}
+onVariantClick();
+
+
+let header = document.querySelector(".header");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 0) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
 });
