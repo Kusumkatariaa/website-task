@@ -43,13 +43,22 @@ minusButton.addEventListener("click", () => {
 let addToCartButton = selector("add-to-cart");
 let cartIcon = selector("cart");
 let cartBubble = cartIcon.querySelector(".bubble");
+let cartCount = 0;
 addToCartButton.addEventListener("click", () => {
-    cartIcon.classList.add("shake");
+    cartCount += quantity;
     cartBubble.style.display = "flex";
-    cartBubble.textContent = quantity;
+    cartBubble.textContent = cartCount;
+    cartIcon.classList.add("shake");
     setTimeout(() => {
         cartIcon.classList.remove("shake");
     }, 500);
+
+// selected variant, quantity, price and image ------ get 
+
+let activeVariant = document.querySelector(".prodVarImg.active");
+console.log(activeVariant.src, activeVariant)
+
+
 });
 
 let productImage = document.querySelector('.prodImg');
@@ -69,7 +78,13 @@ function onVariantClick() {
 
 }
 onVariantClick();
+function setDefaultVariant(){
+    let firstVariant = variantImages[0];
+    firstVariant.classList.add("active");
+    productImage.src = firstVariant.src;
+}
 
+setDefaultVariant();
 
 let header = document.querySelector(".header");
 
@@ -80,3 +95,18 @@ window.addEventListener("scroll", () => {
     header.classList.remove("scrolled");
   }
 });
+
+
+let cart = selector("cart");
+let updateCart = selector("updateCart");
+let closeCartButton = selector("close-cart");
+updateCart.style.display = "none";
+cart.addEventListener("click", () => {
+    updateCart.style.display = "block";
+});
+
+closeCartButton.addEventListener("click", () => {
+    updateCart.style.display = "none";
+});
+
+let cartItems = [];

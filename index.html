@@ -157,18 +157,57 @@
                     <option value="large">Large</option>
                 </select>
                 <div class="imageVariants">
-                    <img class="prodVarImg" src="./assets/PRODUCT_10.webp" alt="Product Image">
-                    <img class="prodVarImg" src="./assets/earings.webp" alt="Product Image">
-                    <img class="prodVarImg" src="./assets/rings.webp" alt="Product Image">
+                    <div class="option">
+                        <img class="prodVarImg" src="./assets/PRODUCT_10.webp" alt="Product Image">
+                        <div class="variant-name">Gold</div>
+                    </div>
+                    <div class="option">
+                        <img class="prodVarImg" src="./assets/diamond.webp" alt="Product Image">
+                        <div class="variant-name">Diamond</div>
+                    </div>
+                    <div class="option">
+                        <img class="prodVarImg" src="./assets/shopping.webp" alt="Product Image">
+                        <div class="variant-name">Gold + Diamond</div>
+                    </div>
+                    
                 </div>
                 <div class="quantity-selector">
                     <button class="quantity-btn" id="decrease">-</button>
                     <span id="quantity" class="quantity">1</span>
                     <button class="quantity-btn" id="increase">+</button>
                 </div>
-                <button id="add-to-cart" class="add-to-cart">Add to Cart</button>
+                <button id="add-to-cart" class="add-to-cart btn">Add to Cart</button>
             </div>
         </section>
+        <div id="updateCart" class="updateCart">
+            <div class="cart_header">
+                <div class="cart_title">Your Cart</div>
+                <button id="close-cart" class="close-cart"><i class="ri-close-line"></i></button>
+            </div>
+
+            <div class="cart-items">
+                <div class="cart-item">
+                    <img src="./assets/PRODUCT_10.webp" alt="Cart Item Image">
+                    <div class="item-details">
+                        <div class="item-name">Elegant Necklace</div>
+                        <div class="varinat-name">Gold</div>
+                        <div class="quantity-selector">
+                    <button class="quantity-btn" class="decrease">-</button>
+                    <span id="quantity" class="quantity">1</span>
+                    <button class="quantity-btn" class="increase">+</button>
+                </div>
+                        <div class="item-price">Price: $79.99</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart_footer">
+                <div class="inner-div">
+                <div class="total">Total: $<span id="cart-total">0.00</span></div>
+                <button id="checkout" class="checkout btn">Checkout</button>
+                </div>
+            </div>
+        </div>
     </main>
     <script src="script.js"></script>
 </body>
