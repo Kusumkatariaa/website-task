@@ -80,7 +80,7 @@ addToCartButton.addEventListener("click", () => {
     cartItems.push(itemDetails);
     updateCartUI();
 });
-
+let priceElement = document.querySelector(".price");
 let productImage = document.querySelector('.prodImg');
 // let variantImages = document.querySelectorAll('.prodVarImg');
 let options = document.querySelectorAll('.option');
@@ -94,6 +94,10 @@ function onVariantClick() {
             option.classList.add("active")
             let varImg = option.querySelector('img').src;
             productImage.src = varImg;
+            let price = document.querySelector(".price");
+            let variantPrice = Number(option.querySelector('.variant-price').textContent);
+
+            priceElement.textContent = `$${variantPrice.toFixed(2)}`;
         })
     })
 
@@ -105,6 +109,9 @@ function setDefaultVariant() {
     let firstOption = options[0];
     firstOption.classList.add("active");
     productImage.src = firstOption.querySelector('img').src;
+    let variantPrice = Number(firstOption.querySelector('.variant-price').textContent);
+
+    priceElement.textContent = `$${variantPrice.toFixed(2)}`;
 }
 
 setDefaultVariant();
